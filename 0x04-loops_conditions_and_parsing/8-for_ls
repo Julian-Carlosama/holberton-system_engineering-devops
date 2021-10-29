@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#script that displays the list 
+#script that displays the list
 
 format='*'
 for i in $format;
 do
-	echo "$i"
+	echo "$i" | cut -f 2 
 done
