@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Script that print 10 times whit until
 var='Best School'
 
 i=0

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Script that print 10 times usig conditionals
 var='Best School'
 
 i=1

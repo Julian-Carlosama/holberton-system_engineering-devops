@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Script that print using if elif and else conditionals
 var='Best School'
 
 i=1
