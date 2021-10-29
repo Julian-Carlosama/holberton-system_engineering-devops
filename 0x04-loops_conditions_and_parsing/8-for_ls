@@ -4,5 +4,5 @@
 format='*'
 for i in $format;
 do
-	echo "$i" | cut -f 2 
+	echo "$i" | cut -f 2 -d '-'
 done
