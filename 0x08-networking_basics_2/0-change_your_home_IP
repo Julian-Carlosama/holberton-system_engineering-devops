@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that configures an Ubuntu server
+cp /etc/hosts ~/hosts.new
+sed ... ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
