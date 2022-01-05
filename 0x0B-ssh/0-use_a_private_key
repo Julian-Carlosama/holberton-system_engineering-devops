@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that connect to server using the privaet key.
+
+ssh -i ~/.ssh/school ubuntu@34.139.21.162
+
