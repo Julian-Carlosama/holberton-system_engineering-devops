@@ -11,7 +11,7 @@ config_dns () {
 
     elif [ "$#" == 2 ];
     then
-	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print "The subdomain " sd " is a", $7, "record and points to", $5}'
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' |tail -1 | awk '{print "The subdomain " sd " is a", $7, "record and points to", $5}'
 
     fi
 }
