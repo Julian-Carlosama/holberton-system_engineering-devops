@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#Bashscript that accept 2 argumets and display inforamtion about this subdomains
+
+config_dns () {
+    if [ "$#" == 1 ];
+    then
+        dig "www.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print "The subdomain www is a", $4, "record and points to", $5}'
+	dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print "The subdomain lb-01 is a", $4, "record and points to", $5}'
+	dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print "The subdomain web-01 is a", $4, "record and points to", $5}'
+	dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print "The subdomain web-02 is a", $4, "record and points to", $5}'
+
+    elif [ "$#" == 2 ];
+    then
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print "The subdomain " sd " is a", $7, "record and points to", $5}'
+
+    fi
+}
+
+config_dns $1 $2
+
