@@ -2,6 +2,6 @@
 # Script that allow run nginx like nginx
 sudo chmod 777 /etc/nginx/nginx.conf
 sudo sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
-sudo sed -i "s/80/8080" /etc/nginx/sites-enabled/default
-sudo pkill -o apache2
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo pkill -9 apache
 su nginx -c "service nginx restart"
